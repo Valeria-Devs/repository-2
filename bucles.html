@@ -1,0 +1,26 @@
+<script>
+    let animales = ['gato', 'perro', 'pato', 'rex'];
+    for (animal in animales) {
+        document.write(animales + `<br>`);
+        document.write(animales[animal]);
+    }
+    for (animal of animales) {
+        document.write(animales + `<br>`);
+    }
+    array1 = ["maria", 'daniela', 'roberta'];
+    array2 = ['gabriel', 'joaquin', array1, 'otronombre'];
+    forPrueba
+    for (array in array2) {
+        if (array == 2) {
+            for (let array of array1) {
+                document.write(array + "<br>");
+                if (array == "maria") {
+                    continue forPrueba;
+                }
+            }
+        } else {
+            document.write(array2[array] + "<br>");
+        }
+
+    }
+</script>
