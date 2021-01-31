@@ -5,10 +5,10 @@ for (i = 0; i < total; i++) {
 
 }
 const assistence = (name, p) => {
-    let assit = promt(name);
+    let assit = prompt(name);
 
     if (assit == "p" || assit == "P") {
-        studens[i][1]++;
+        studens[p][1]++;
     }
 
 }
@@ -17,18 +17,18 @@ for (i = 0; i < 30; i++) {
     for (student in studens) {
         assistence(studens[student][0], student);
     }
-    for (student in studens) {
-        let resp = `${studens [student][0]} : <br>
+}
+for (student in studens) {
+    let resp = `${studens [student][0]} : <br>
 ________________ Presentes : ${studens[student][1]}
 <br>
-________________ Ausencias : ${30-studens[student][1]}
+________________ Ausencias : ${30-studens[student[1]]}
 `;
-        if (30 > students[student][1]) {
-            resp += `<b style='color:red'> Reprobado por inasistencias </b> <br><br>`;
+    if (30 - studens[student][1] > 18) {
+        resp += "<b style='color:red'> Reprobado por inasistencias </b> <br><br>";
 
-        } else {
-            resp = `<br><br>`;
-        }
-
+    } else {
+        resp += `<br><br>`;
     }
+    document.write(resp);
 }
