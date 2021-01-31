@@ -11,14 +11,34 @@
 </head>
 
 <body>
-    <script>
-        function suma(num1, num2) {
-            let addition = num1 + num2;
-            document.write(addition);
-        }
-    </script>
+    <p>Dejar pasar solo a los mayores de edad </p>
+    <p> La primer persona que entre despues de las 2 AM , no paga </p>
 </body>
+<script>
+    //entrada gratis 
+    let free = false;
+    const validationCustumer = (time) => {
+        let age = prompt("¿Cual es tu edad?");
+        if (age > 18) {
+            if (time >= 2 && time < 7 && free == false) {
+                alert("Aplica promocion gratis primer persona despues de las 2");
+                free = true;
+            } else {
+                alert(`son las  ${time} :00 Hs y no puede aplicar promocion`);
+            }
+        } else {
+            alert("Eres menor de edad no puedes entrar");
+        }
 
-</html>
+    }
+    validationCustumer(23);
+    validationCustumer(24);
+    validationCustumer(0.2);
+    validationCustumer(0.6);
+    validationCustumer(1);
+    validationCustumer(2);
+    validationCustumer(2.4);
+    validationCustumer(3);
+</script>
 
 </html>
